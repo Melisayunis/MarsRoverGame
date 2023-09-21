@@ -1,0 +1,64 @@
+
+/* Titulo Glitched*/
+// https://codepen.io/lbebber/pen/nqwBKK
+
+
+
+body{
+  font-family: monospace, sans-serif;
+}
+
+.glitch{
+  color:rgb(53, 16, 3);
+  font-size:xxx-large;
+  position:relative;
+  width:410px;
+  margin:0 auto;
+  display: flex;
+  margin: auto;
+  padding: 10px;
+}
+
+@keyframes noise-anim{
+  $steps:20;
+  @for $i from 0 through $steps{
+    #{percentage($i*(1/$steps))}{
+      clip:rect(random(100)+px,9999px,random(100)+px,0);
+    }
+  }
+}
+
+.glitch:after{
+  content:attr(data-text);
+  position:absolute;
+  left:2px;
+  text-shadow:-1px 0 rgb(219, 159, 20);
+  top:0;
+  color:rgb(47, 17, 6);
+  overflow:hidden;
+  clip:rect(0,900px,0,0); 
+  animation:noise-anim 2s infinite linear alternate-reverse;
+  padding: 10px;
+}
+
+@keyframes noise-anim-2{
+  $steps:20;
+  @for $i from 0 through $steps{
+    #{percentage($i*(1/$steps))}{
+      clip:rect(random(100)+px,9999px,random(100)+px,0);
+    }
+  }
+}
+
+.glitch:before{
+  content:attr(data-text);
+  position:absolute;
+  left:-2px;
+  text-shadow:1px 0 rgb(226, 95, 13); 
+  top:0;
+  color:rgb(30, 11, 3);
+  overflow:hidden;
+  clip:rect(0,900px,0,0); 
+  animation:noise-anim-2 3s infinite linear alternate-reverse;
+  padding: 10px;
+}

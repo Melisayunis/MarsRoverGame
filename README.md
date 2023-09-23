@@ -35,9 +35,12 @@ Follow these steps: Maven -> MarsRover -> Plugins -> spring-boot -> spring-boot:
 <p> The game in the browser.</p>
 <li> To open the game in the browser, you will need to open Visual Studio Code, add the project tothe IDE, sourch the file <i>\Mars Rover\MarsRover\src\main\resources\static\index.html</i> and start Go Live for run live server.</li>
 <li> And now you should see this image:</li>
+
 ![MarsRoverGameIniti](https://github.com/Melisayunis/MarsRoverGame/blob/master/MarsRoverGameInit.png)
+
 <li> Start to play! Choose the Map size and the difficult and click to Play button. Now will be positioned randomly the Rover, Object Martian and the Finish Line. For example, this would be a view if you choose middle size and medium difficult: 
-![PlayMiddleMediumGame](https://github.com/Melisayunis/MarsRoverGame/blob/master/PlayMiddleMediumGame.png)
+  
+  ![PlayMiddleMediumGame](https://github.com/Melisayunis/MarsRoverGame/blob/master/PlayMiddleMediumGame.png) 
 
 You can observe and distinguish the Rover because it a dark background , and the finish line it has a light background. </li>
 
@@ -46,7 +49,8 @@ You can observe and distinguish the Rover because it a dark background , and the
 <li> Turn the rover with the buttons <i>Left</i> and <i>Right</i>. </li>
 
 <li> <b> But pay attention to the direction the rover's yellow arrow points to move and turn. </b> 
-![RoverDirections](https://github.com/Melisayunis/MarsRoverGame/blob/master/Rover%20Directions.png)
+
+  ![RoverDirections](https://github.com/Melisayunis/MarsRoverGame/blob/master/Rover%20Directions.png)
   
 Also be careful with Martian objects, you don't want to crash!
 ![RoverCrash](https://github.com/Melisayunis/MarsRoverGame/blob/master/RoverCrash.png)

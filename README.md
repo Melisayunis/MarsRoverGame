@@ -1,7 +1,5 @@
 <h1 align="center">
-  <br>
-  MARS ROVER GAME
-  <br>
+  <br> MARS ROVER GAME <br>
 </h1>
 
 <h4> 
@@ -15,7 +13,7 @@ En pos de que el proyecto tenga mas valor y utilidad, es que se ha implementado 
 ## UML Diagram 
 
 <p> </p>
-![UML Diagram of Mars Rover Game] (https://github.com/Melisayunis/MarsRoverGame/blob/master/Mars%20Rover%20UML%20Diagram.png)
+![UML Diagram of Mars Rover Game](https://github.com/Melisayunis/MarsRoverGame/blob/master/Mars%20Rover%20UML%20Diagram.png)
 
 ## EXECUTION
 
@@ -37,7 +35,7 @@ Follow these steps: Maven -> MarsRover -> Plugins -> spring-boot -> spring-boot:
 <p> The game in the browser.</p>
 <li> To open the game in the browser, you will need to open Visual Studio Code, add the project tothe IDE, sourch the file <i>\Mars Rover\MarsRover\src\main\resources\static\index.html</i> and start Go Live for run live server.</li>
 <li> And now you should see this image:</li>
-![MarsRoverGameIniti] (https://github.com/Melisayunis/MarsRoverGame/blob/master/MarsRoverGameInit.png)
+![MarsRoverGameIniti](https://github.com/Melisayunis/MarsRoverGame/blob/master/MarsRoverGameInit.png)
 <li> Start to play! Choose the Map size and the difficult and click to Play button. Now will be positioned randomly the Rover, Object Martian and the Finish Line. For example, this would be a view if you choose middle size and medium difficult: 
 ![PlayMiddleMediumGame](https://github.com/Melisayunis/MarsRoverGame/blob/master/PlayMiddleMediumGame.png)
 
@@ -58,10 +56,10 @@ Also be careful with Martian objects, you don't want to crash!
 ![]()
 </li>
 
-<li> You can play again by pressiong the <i>Play Again!</i> button.
+<li> You can play again by pressiong the <i>Play Again! </i> button.
 ![]()
 </li>
 
 </ul>
 
-<><>
+<footer>Thankyou! By Asilem! </footer>

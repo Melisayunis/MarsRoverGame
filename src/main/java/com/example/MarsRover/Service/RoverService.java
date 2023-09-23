@@ -128,6 +128,7 @@ public class RoverService implements IRoverService {
 
         if (isRoverMoved) {
             iLockerService.setFreePosition(positionX, movingToY);
+            roverInstance.setHasCrashed(false);
         } else {
             roverInstance.setHasCrashed(true);
         }
@@ -158,6 +159,7 @@ public class RoverService implements IRoverService {
 
         if (isRoverMoved) {
             iLockerService.setFreePosition(movingToX, positionY);
+            roverInstance.setHasCrashed(false);
         } else {
             roverInstance.setHasCrashed(true);
         }

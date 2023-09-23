@@ -40,7 +40,7 @@ public class MarsMapController {
         }
     }
 
-    @PutMapping("/marsmap/moving-rover")
+    @PutMapping(path = "/marsmap/moving-rover", consumes = "application/json")
     public ResponseEntity<MarsMap> moveRover(@RequestBody String command) {
         try {
             MarsMap movingRoverMap = marsMapService.updateMarsMapMoveRover(command);
@@ -50,7 +50,7 @@ public class MarsMapController {
         }
     }
 
-    @PutMapping("/marsmap/turn-rover")
+    @PutMapping(path = "/marsmap/turn-rover", consumes = "application/json")
     public ResponseEntity<MarsMap> turnRover(@RequestBody String command) {
         try {
             MarsMap movingRoverMap = marsMapService.updateMarsMapTurnRover(command);

@@ -61,19 +61,32 @@ public class MartianObjectService implements IMartianObjectService {
 
     private int howManyObjectCreate(String levelDifficult) {
 
+        if (marsMapInstance.getHeightX() == 6) {
+            return objectsToLevelDifficult(levelDifficult);
+
+        } else if (marsMapInstance.getHeightX() == 9) {
+            return (objectsToLevelDifficult(levelDifficult) * 2);
+
+        } else if (marsMapInstance.getHeightX() == 12) {
+            return (objectsToLevelDifficult(levelDifficult) * 3);
+
+        }
+        System.out.println(" No deberia entrar aca! ");
+        return 0;
+    }
+
+    private int objectsToLevelDifficult(String levelDifficult) {
+        int objectsCreate = 0;
+
         if (levelDifficult.equalsIgnoreCase(LevelDifficult.EASY.difficult)) {
-            return LevelDifficult.EASY.amountObjects;
+            objectsCreate = LevelDifficult.EASY.amountObjects;
         } else if (levelDifficult.equalsIgnoreCase(LevelDifficult.MEDIUM.difficult)) {
-            return LevelDifficult.MEDIUM.amountObjects;
+            objectsCreate = LevelDifficult.MEDIUM.amountObjects;
         } else if (levelDifficult.equalsIgnoreCase(LevelDifficult.HARD.difficult)) {
-            return LevelDifficult.HARD.amountObjects;
+            objectsCreate = LevelDifficult.HARD.amountObjects;
         }
 
-        if(true) {
-            System.out.println( " El level ingresado esta mal - no deberia ingresar aca");
-            return 0;
-        }
-        return 0;
+        return objectsCreate;
     }
 
     private String randomObjectMartian() {

@@ -14,8 +14,7 @@ document.addEventListener('DOMContentLoaded', function () {
 
         const mapSizeValue = mapSize.value;
         const [rows, cols] = mapSizeValue.split('x').map(str => parseInt(str, 10));
-        
-        const configuracionURL = `playgame.html?levelDifficult=${encodeURIComponent(difficulty.value)}&heightX=${rows}&wideY=${cols}`;
+        const configuracionURL = `playochos.html?levelDifficult=${encodeURIComponent(difficulty.value)}&heightX=${rows}&wideY=${cols}`;
         window.location.href = configuracionURL;
         
     })

@@ -19,6 +19,7 @@ button {
     margin: 15px;
     background-color: #a4350fc2;
     border-color: #513403a0;
+    border-radius: 5px;
     color: white;
     cursor: pointer;
     box-shadow: 2px 2px 5px #2f2e2c;
@@ -45,6 +46,7 @@ input[type="radio"] {
     background-color: rgba(222, 184, 135, 0.713);
     padding: 10px;
     box-shadow: 5px 5px 7px #3e1e0775;
+    border-radius: 25px;
 }
 
 .form-section {

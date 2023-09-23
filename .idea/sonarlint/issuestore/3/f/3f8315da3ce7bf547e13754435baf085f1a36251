@@ -1,0 +1,14 @@
+
+t	java:S120"ZRename this package name to match the regular expression '^[a-z_]+(\.[a-z_][a-z0-9_]*)*$'.(â‚Œœúÿÿÿÿ
+=
+java:S1659"'Declare "positionY" on a separate line.(˜º–¹
+N	java:S106#"9Replace this use of System.out or System.err by a logger.(÷ˆø©
+S	java:S106$"9Replace this use of System.out or System.err by a logger.(‹Âêøÿÿÿÿ
+U	java:S106*"9Replace this use of System.out or System.err by a logger.(ÂĞ´Ñ8çôõªª1
+:
+java:S21199"Save and re-use this "Random".(¼İÅf8”ä£«ª1
+Z	java:S106E"9Replace this use of System.out or System.err by a logger.(‘«æşÿÿÿÿÿ8ØËøªª1
+K
+java:S2140G")Use "java.util.Random.nextInt()" instead.(»„ùûÿÿÿÿ8›’ «ª1
+g
+java:S1128"ERemove this unused import 'org.springframework.stereotype.Component'.(Ş÷Ñ¸ÿÿÿÿÿ8‘¸Ä¬ª1

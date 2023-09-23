@@ -1,0 +1,6 @@
+
+k
+java:S1104"UMake difficult a static final constant or non-public and provide accessors if needed.(Öý“Ë
+t	java:S120"ZRename this package name to match the regular expression '^[a-z_]+(\.[a-z_][a-z0-9_]*)*$'.(ËÄ£çýÿÿÿÿ
+9
+java:S3066"#Lower the visibility of this field.(Öý“Ë

@@ -1,0 +1,146 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="AutoImportSettings">
+    <option name="autoReloadType" value="SELECTIVE" />
+  </component>
+  <component name="ChangeListManager">
+    <list default="true" id="650ee9fe-76b9-4de0-b1d9-8fa73542ceb6" name="Changes" comment="" />
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="FileTemplateManagerImpl">
+    <option name="RECENT_TEMPLATES">
+      <list>
+        <option value="Enum" />
+        <option value="Interface" />
+        <option value="Class" />
+      </list>
+    </option>
+  </component>
+  <component name="MarkdownSettingsMigration">
+    <option name="stateVersion" value="1" />
+  </component>
+  <component name="MavenImportPreferences">
+    <option name="generalSettings">
+      <MavenGeneralSettings>
+        <option name="mavenHome" value="Use Maven wrapper" />
+      </MavenGeneralSettings>
+    </option>
+  </component>
+  <component name="ProjectColorInfo">{
+  &quot;associatedIndex&quot;: 0
+}</component>
+  <component name="ProjectId" id="2VA9T4i3isOASeZ56jJtwsEMz7g" />
+  <component name="ProjectViewState">
+    <option name="hideEmptyMiddlePackages" value="true" />
+    <option name="showLibraryContents" value="true" />
+  </component>
+  <component name="PropertiesComponent"><![CDATA[{
+  "keyToString": {
+    "RunOnceActivity.OpenProjectViewOnStart": "true",
+    "RunOnceActivity.ShowReadmeOnStart": "true",
+    "last_opened_file_path": "C:/Users/Briangio/Desktop/Mars Rover Sin front",
+    "onboarding.tips.debug.path": "C:/Users/Briangio/Desktop/Mars Rover/MarsRover/src/main/java/org/example/Main.java",
+    "settings.editor.selected.configurable": "preferences.pluginManager"
+  }
+}]]></component>
+  <component name="RunManager" selected="JUnit.com.example.MarsRover.ServiceTest in MarsRover">
+    <configuration name="MoveRoverEastTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="MarsRover" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="com.example.MarsRover.ServiceTest.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="com.example.MarsRover.ServiceTest" />
+      <option name="MAIN_CLASS_NAME" value="com.example.MarsRover.ServiceTest.MoveRoverEastTest" />
+      <option name="TEST_OBJECT" value="class" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="MoveRoverNorthTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="MarsRover" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="com.example.MarsRover.ServiceTest.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="com.example.MarsRover.ServiceTest" />
+      <option name="MAIN_CLASS_NAME" value="com.example.MarsRover.ServiceTest.MoveRoverNorthTest" />
+      <option name="TEST_OBJECT" value="class" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="TurnRoverTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="MarsRover" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="com.example.MarsRover.ServiceTest.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="com.example.MarsRover.ServiceTest" />
+      <option name="MAIN_CLASS_NAME" value="com.example.MarsRover.ServiceTest.TurnRoverTest" />
+      <option name="TEST_OBJECT" value="class" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="TurnRoverTest.turnRoverLeftNorthTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="MarsRover" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="com.example.MarsRover.ServiceTest.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="com.example.MarsRover.ServiceTest" />
+      <option name="MAIN_CLASS_NAME" value="com.example.MarsRover.ServiceTest.TurnRoverTest" />
+      <option name="METHOD_NAME" value="turnRoverLeftNorthTest" />
+      <option name="TEST_OBJECT" value="method" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="com.example.MarsRover.ServiceTest in MarsRover" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="MarsRover" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="com.example.MarsRover.ServiceTest.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="com.example.MarsRover.ServiceTest" />
+      <option name="TEST_OBJECT" value="package" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <recent_temporary>
+      <list>
+        <item itemvalue="JUnit.com.example.MarsRover.ServiceTest in MarsRover" />
+        <item itemvalue="JUnit.MoveRoverNorthTest" />
+        <item itemvalue="JUnit.MoveRoverEastTest" />
+        <item itemvalue="JUnit.TurnRoverTest" />
+        <item itemvalue="JUnit.TurnRoverTest.turnRoverLeftNorthTest" />
+      </list>
+    </recent_temporary>
+  </component>
+  <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="650ee9fe-76b9-4de0-b1d9-8fa73542ceb6" name="Changes" comment="" />
+      <created>1694268029520</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1694268029520</updated>
+    </task>
+    <servers />
+  </component>
+</project>

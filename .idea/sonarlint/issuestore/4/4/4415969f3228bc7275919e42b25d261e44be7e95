@@ -1,0 +1,8 @@
+
+v	java:S120"ZRename this package name to match the regular expression '^[a-z_]+(\.[a-z_][a-z0-9_]*)*$'.(¹­ƒ‹8Àõ¯ªª1
+`
+java:S1128"CRemove this unused import 'org.hibernate.annotations.JdbcTypeCode'.(‚ôÏ‰8à¥Â¬ª1
+U
+java:S1128"8Remove this unused import 'org.hibernate.type.SqlTypes'.(¸´ö½8ã¥Â¬ª1
+M
+java:S1128	"+Remove this unused import 'java.util.List'.(Õë±Äøÿÿÿÿ8ä¥Â¬ª1

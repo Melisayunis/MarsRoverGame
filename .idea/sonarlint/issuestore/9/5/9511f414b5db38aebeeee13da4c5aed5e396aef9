@@ -1,0 +1,18 @@
+
+{	java:S120"ZRename this package name to match the regular expression '^[a-z_]+(\.[a-z_][a-z0-9_]*)*$'.(â‚Œœúÿÿÿÿ8Ë²«ª1
+r
+java:S3655="PCall "Optional#isPresent()" or "!Optional#isEmpty()" before accessing the value.(”íÅşÿÿÿÿ8’Ü²«ª1
+Z	java:S1061"9Replace this use of System.out or System.err by a logger.(¡Äÿ×ûÿÿÿÿ8ÀÜ²«ª1
+W	java:S125M"<This block of commented-out lines of code should be removed.(ğ¨8ŠâÍ¬ª1
+U	java:S106P"9Replace this use of System.out or System.err by a logger.(”¼¨Í8ôÜ²«ª1
+U	java:S106S"9Replace this use of System.out or System.err by a logger.(²º–Ö8ùÜ²«ª1
+Z	java:S106X"9Replace this use of System.out or System.err by a logger.(ÚÉÚ¦ùÿÿÿÿ8şÜ²«ª1
+]	java:S125V"<This block of commented-out lines of code should be removed.(øš¯—ùÿÿÿÿ8½„Î¬ª1
+_
+java:S1126"AReplace this if-then-else statement by a single return statement.(¯Êš‘8¡İ²«ª1
+E
+java:S1659µ"'Declare "positionY" on a separate line.(˜º–¹8¶İ²«ª1
+L
+java:S2140Ê")Use "java.util.Random.nextInt()" instead.(»„ùûÿÿÿÿ8¿İ²«ª1
+[	java:S106Ø"9Replace this use of System.out or System.err by a logger.(³ó®Ùùÿÿÿÿ8Ëİ²«ª1
+^	java:S125æ"<This block of commented-out lines of code should be removed.(Ã Ê½ùÿÿÿÿ8ÊÎÅ«ª1

@@ -1,0 +1,66 @@
+body {
+    font-family: monospace, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-image: url('rovers.jpg');
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+
+button {
+    font-family: monospace;
+    font-size: large;
+    padding: 10px 50px;
+    margin: 15px;
+    background-color: #a4350fc2;
+    border-color: #513403a0;
+    border-radius: 5px;
+    color: white;
+    cursor: pointer;
+    box-shadow: 2px 2px 5px #2f2e2c;
+    transition: background-color 0.3s ease, border-color 0.3s ease;
+}
+
+
+button:hover {
+    background-color: #dd1c02c5;
+    border-color: #2e0704a2;
+}
+
+#map-container {
+    width: 700px;
+    display: flex;
+    margin: auto;
+    flex-direction: column;
+    align-items: center;
+    background-color: rgba(222, 184, 135, 0.713);
+    padding: 10px;
+    box-shadow: 5px 5px 7px #3e1e0775;
+    border-radius: 25px;
+}
+
+.footer {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    /*background-color: #9a72725c;*/
+    color: rgb(95, 27, 59);
+    text-align: center;
+    padding: 5px;
+}
+
+#glitch {
+    text-align: center;
+}
+
+
+#grid-container {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr); /* Por defecto, 4x4 */
+    gap: 10px;
+    max-width: 80%;
+    max-height: 80%;
+    border: 1px solid #ccc;
+    padding: 10px;
+}

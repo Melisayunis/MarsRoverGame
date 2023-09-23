@@ -2,7 +2,7 @@
   <br> MARS ROVER GAME <br>
 </h1>
 
-<p align="justify"> 
+<p  text-align: justify> 
 Mars Rover Game, it is an adapted version of <a href="https://kata-log.rocks/mars-rover-kata" target="_blank"> Mars Rover Cata</a>, where an API was developed that translates commands sent from Earth into instructions that the rover understands. 
 As indicated in Cata, edge wrapping and obstacle detection have been implemented. As well as the movement and turn format of the rover.
 <br><br>
@@ -65,7 +65,7 @@ Also be careful with Martian objects, you don't want to crash!
   ![YouWonWellDone](https://github.com/Melisayunis/MarsRoverGame/blob/master/YouWonPlayAgain.png)
 </li>
 
-<li> You can play again by pressiong the <i>Play Again! </i> button.</li>
+<li> You can play again by clicking on <i>Play Again! </i> button.</li>
 </ul>
 
 <br>

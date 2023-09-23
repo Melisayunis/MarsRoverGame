@@ -3,11 +3,14 @@
 </h1>
 
 <h4> 
-Mars Rover Game, es una version adaptada de <a href="https://kata-log.rocks/mars-rover-kata" target="_blank"> Mars Rover Cata</a>. 
-Este proyecto a sido parte de una entrega final para aprobar y rendir un examen final del BootCamp BackEnd Java en <b><a href="http://atl.academy" target="_blank"> ATL Academy</a></b> brindado por Lucas Moy.
+Mars Rover Game, it is an adapted version of <a href="https://kata-log.rocks/mars-rover-kata" target="_blank"> Mars Rover Cata</a>, where an API was developed that translates commands sent from Earth into instructions that the rover understands. 
+As indicated in Cata, edge wrapping and obstacle detection have been implemented. As well as the movement and turn format of the rover.
+
+This proyect is the final delivery to pass and take a final exam of the BackEnd Java BootCamp at <b><a href="http://atl.academy" target="_blank"> ATL Academy</a></b> provided by Lucas Moy.
 <br>
-En pos de que el proyecto tenga mas valor y utilidad, es que se ha implementado como un juego simple cuya finalidad es:
- de trasladar al objeto rover a una meta final, sin chocar con diversos objetos marcianos que se encuentran ene l camino, a traves de 2 movimientos: adelante y atras, y 2 giros: hacia la izquierda o hacia la derecha.
+In order for the project to have more value and usefulness, it has been implemented as a simple game whose purpose is:
+ Through movements and turns, move the rover across the map of Mars towards a final goal, without colliding with various Martian objects that are along the way. Taking into account where the rover is looking, you can make 2 movements: forward and backward; and 2 turns: left or right. You will win if you reach the finish line.
+  
 </h4>
 
 ## UML Diagram 
@@ -33,7 +36,7 @@ En pos de que el proyecto tenga mas valor y utilidad, es que se ha implementado 
 Follow these steps: Maven -> MarsRover -> Plugins -> spring-boot -> spring-boot:run 
 <br> And now wait for spring to start. </li>
 <br>
-<p> The game in the browser.</p>
+<p> Play the game in the browser.</p>
 <li> To open the game in the browser, you will need to open Visual Studio Code, add the project tothe IDE, sourch the file <i>\Mars Rover\MarsRover\src\main\resources\static\index.html</i> and start Go Live for run live server.</li>
 <li> And now you should see this image:</li>
 
@@ -65,4 +68,5 @@ Also be careful with Martian objects, you don't want to crash!
 <li> You can play again by pressiong the <i>Play Again! </i> button.</li>
 </ul>
 
-<footer> Thankyou! By Asilem! </footer>
+<br>
+<footer> Thank you! By Asilem! </footer>

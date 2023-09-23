@@ -57,7 +57,7 @@ You can observe and distinguish the Rover because it a dark background , and the
   ![RoverDirections](https://github.com/Melisayunis/MarsRoverGame/blob/master/Rover%20Directions.png)
   
 Also be careful with Martian objects, you don't want to crash!
-![RoverCrash](https://github.com/Melisayunis/MarsRoverGame/blob/master/RoverCrash.png)
+![RoverCrashed](https://github.com/Melisayunis/MarsRoverGame/blob/master/RoverCrasheds.png)
 </li>
 
 <li> You finally win when the rover lands on top of the finish line. Congratulations!

@@ -12,7 +12,8 @@ En pos de que el proyecto tenga mas valor y utilidad, es que se ha implementado 
 
 ## UML Diagram 
 
-<p> </p>
+<p> Below is the diagram of relationship between the project classes:</p>
+
 ![UML Diagram of Mars Rover Game](https://github.com/Melisayunis/MarsRoverGame/blob/master/Mars%20Rover%20UML%20Diagram.png)
 
 ## EXECUTION
@@ -57,13 +58,11 @@ Also be careful with Martian objects, you don't want to crash!
 </li>
 
 <li> You finally win when the rover lands on top of the finish line. Congratulations!
-![]()
+
+  ![YouWonWellDone](https://github.com/Melisayunis/MarsRoverGame/blob/master/YouWonPlayAgain.png)
 </li>
 
-<li> You can play again by pressiong the <i>Play Again! </i> button.
-![]()
-</li>
-
+<li> You can play again by pressiong the <i>Play Again! </i> button.</li>
 </ul>
 
-<footer>Thankyou! By Asilem! </footer>
+<footer> Thankyou! By Asilem! </footer>

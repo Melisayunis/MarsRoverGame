@@ -3,13 +3,17 @@ document.addEventListener('DOMContentLoaded', function () {
     backgroundMusic.volume = '0.3';
     backgroundMusic.play();
 
+    const mapContainer = document.getElementById('map-container');
+    mapContainer.style.display = 'none';
+
+    const loadder = document.getElementById('loader');
+    loadder.style.display = 'flex';
+
     const urlParams = new URLSearchParams(window.location.search);
 
     const levelDifficult = urlParams.get('levelDifficult');
     const heightX = urlParams.get('heightX');
     const wideY = urlParams.get('wideY');
-
-    const mapTable = document.getElementById('map-table');
 
     let roverPositionX;
     let roverPositionY;
@@ -35,6 +39,13 @@ document.addEventListener('DOMContentLoaded', function () {
         .catch(error => {
             console.error('Error al procesar la respuesta del servidor ¿-_-?:', error);
         });
+
+
+    setTimeout(function () {
+        loadder.style.display = 'none';
+        mapContainer.style.display = 'flex';
+    }, 3000);
+
 
     function generateMap(marsMap) {
         size = marsMap.wideY;
@@ -168,10 +179,7 @@ document.addEventListener('DOMContentLoaded', function () {
 
         function isCrashed(newMarsMap) {
             if (newMarsMap.rover.hasCrashed) {
-
-                    soundCrashRover();
-                
-
+                soundCrashRover();
                 alert(" ¡¡ Careful !! You have crashed, try to go a new route..");
             } else {
                 cleanRoverMap();
@@ -304,7 +312,7 @@ document.addEventListener('DOMContentLoaded', function () {
             var backgroundMusic = document.getElementById('background-music');
             backgroundMusic.pause();
             backgroundMusic.src = '/src/main/resources/static/sounds/ganar.mp3';
-            
+
             backgroundMusic.play();
             backgroundMusic.volume = '0.8';
         }

@@ -6,13 +6,7 @@
   <component name="ChangeListManager">
     <list default="true" id="650ee9fe-76b9-4de0-b1d9-8fa73542ceb6" name="Changes" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/MarsRover/Service/RoverService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/MarsRover/Service/RoverService.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/static/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/static/index.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/static/playgame.html" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/resources/static/playochos.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/static/playochos.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/static/scripborrador.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/static/script.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/static/script.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/static/scriptplay.js" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/resources/static/scriptplayochos.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/static/scriptplayochos.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/resources/static/stylesplayochos.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/static/stylesplayochos.css" afterDir="false" />
     </list>

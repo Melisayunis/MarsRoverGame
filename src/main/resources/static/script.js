@@ -1,4 +1,7 @@
 document.addEventListener('DOMContentLoaded', function () {
+    var backgroundMusic = document.getElementById('background-music');
+    backgroundMusic.volume = '0.8';
+    backgroundMusic.play();
 
     const playButton = document.getElementById('play-button');
 

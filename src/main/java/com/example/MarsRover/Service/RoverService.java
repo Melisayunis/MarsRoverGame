@@ -115,30 +115,12 @@ public class RoverService implements IRoverService {
         boolean isRoverMoved = false;
 
         if (movingToY == initialY) {
-            if (!iLockerService.isObjectHere(positionX, finalY)) {
-                movingY(positionX, finalY);
-                isRoverMoved = true;
-            }
+            isRoverMoved = isRoverMoving(positionX, finalY);
         } else {
-            if (!iLockerService.isObjectHere(positionX, movingYHere)) {
-                movingY(positionX, movingYHere);
-                isRoverMoved = true;
-            }
+            isRoverMoved = isRoverMoving(positionX, movingYHere);
         }
 
-        if (isRoverMoved) {
-            iLockerService.setFreePosition(positionX, movingToY);
-            roverInstance.setHasCrashed(false);
-        } else {
-            roverInstance.setHasCrashed(true);
-        }
-    }
-
-    private void movingY(int positionX, int moveY) {
-        roverInstance.setPositionY(moveY);
-        roverRepository.save(roverInstance);
-
-        iLockerService.putOccupiedPosition(positionX, moveY);
+        roverCrash(positionX, movingToY, isRoverMoved);
     }
 
     private void moveNorthSouth(int movingToX, int initialX, int finalX, int movingXHere) {
@@ -146,30 +128,37 @@ public class RoverService implements IRoverService {
         boolean isRoverMoved = false;
 
         if (movingToX == initialX) {
-            if (!iLockerService.isObjectHere(finalX, positionY)) {
-                movingX(finalX, positionY);
-                isRoverMoved = true;
-            }
+            isRoverMoved = isRoverMoving(finalX, positionY);
         } else {
-            if (!iLockerService.isObjectHere(movingXHere, positionY)) {
-                movingX(movingXHere, positionY);
-                isRoverMoved = true;
-            }
+            isRoverMoved = isRoverMoving(movingXHere, positionY);
         }
 
+        roverCrash(movingToX, positionY, isRoverMoved);
+    }
+
+    private boolean isRoverMoving(int positionX, int positionY) {
+        if (!iLockerService.isObjectHere(positionX, positionY)) {
+            moveRoverHere(positionX, positionY);
+            return true;
+        }
+        return false;
+    }
+
+    private void moveRoverHere(int positionX, int positionY) {
+        roverInstance.setPositionX(positionX);
+        roverInstance.setPositionY(positionY);
+        roverRepository.save(roverInstance);
+
+        iLockerService.putOccupiedPosition(positionX, positionY);
+    }
+
+    private void roverCrash(int positionX, int positionY, boolean isRoverMoved) {
         if (isRoverMoved) {
-            iLockerService.setFreePosition(movingToX, positionY);
+            iLockerService.setFreePosition(positionX, positionY);
             roverInstance.setHasCrashed(false);
         } else {
             roverInstance.setHasCrashed(true);
         }
-    }
-
-    private void movingX(int moveX, int positionY) {
-        roverInstance.setPositionX(moveX);
-        roverRepository.save(roverInstance);
-
-        iLockerService.putOccupiedPosition(moveX, positionY);
     }
 
 

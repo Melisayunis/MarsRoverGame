@@ -1,12 +1,19 @@
 document.addEventListener('DOMContentLoaded', function () {
+    var backgroundMusic = document.getElementById('background-music');
+    backgroundMusic.volume = '0.3';
+    backgroundMusic.play();
+
+    const mapContainer = document.getElementById('map-container');
+    mapContainer.style.display = 'none';
+
+    const loadder = document.getElementById('loader');
+    loadder.style.display = 'flex';
 
     const urlParams = new URLSearchParams(window.location.search);
 
     const levelDifficult = urlParams.get('levelDifficult');
     const heightX = urlParams.get('heightX');
     const wideY = urlParams.get('wideY');
-
-    const mapTable = document.getElementById('map-table');
 
     let roverPositionX;
     let roverPositionY;
@@ -33,6 +40,13 @@ document.addEventListener('DOMContentLoaded', function () {
             console.error('Error al procesar la respuesta del servidor ¿-_-?:', error);
         });
 
+
+    setTimeout(function () {
+        loadder.style.display = 'none';
+        mapContainer.style.display = 'flex';
+    }, 4000);
+
+
     function generateMap(marsMap) {
         size = marsMap.wideY;
 
@@ -49,7 +63,9 @@ document.addEventListener('DOMContentLoaded', function () {
 
             const image = document.createElement('img');
             image.classList.add('grid-image');
-            image.src = '/images/fondo.png';
+            image.src = '/src/main/resources/static/images/fondo.png';
+            image.alt = 'Fondo';
+            image.title = 'Paisaje marciano';
             gridItem.appendChild(image);
         }
 
@@ -61,10 +77,11 @@ document.addEventListener('DOMContentLoaded', function () {
             const finishY = finishLine[1] - 1;
 
             const targetGridItem = gridItems[finishX * size + finishY];
-
-            const newImageSrc = '/images/FINISH_LINE.png';
+            const newImageSrc = '/src/main/resources/static/images/FINISH_LINE.png';
             const imageElement = targetGridItem.querySelector('.grid-image');
             imageElement.src = newImageSrc;
+            imageElement.alt = 'FINISH_LINE';
+            imageElement.title = 'Finish line';
             targetGridItem.style.backgroundColor = '#e8d3c6b0';
 
         } else {
@@ -79,9 +96,11 @@ document.addEventListener('DOMContentLoaded', function () {
 
             const roverGridItem = gridItems[roverPositionX * size + roverPositionY];
 
-            const roverImage = `/images/ROVER_${roverDirection}.png`;
+            const roverImage = `/src/main/resources/static/images/ROVER_${roverDirection}.png`;
             const imageElementRover = roverGridItem.querySelector('.grid-image');
             imageElementRover.src = roverImage;
+            imageElementRover.alt = `ROVER_${roverDirection}`;
+            imageElementRover.title = `Rover looking at ${roverDirection}`;
             roverGridItem.style.backgroundColor = 'rgba(56, 31, 12, 0.79)';
 
         } else {
@@ -94,9 +113,11 @@ document.addEventListener('DOMContentLoaded', function () {
                 const positY = obj.positionY - 1;
 
                 const martianObjectGridItem = gridItems[positX * size + positY];
-                const martianImage = `/images/${obj.name}.png`;
+                const martianImage = `/src/main/resources/static/images/${obj.name}.png`;
                 const imageElementMartian = martianObjectGridItem.querySelector('.grid-image');
                 imageElementMartian.src = martianImage;
+                imageElementMartian.alt = `${obj.name}`;
+                imageElementMartian.title = `${obj.name}`;
             });
         } else {
             console.log(" Martian Objects empty.");
@@ -110,6 +131,7 @@ document.addEventListener('DOMContentLoaded', function () {
         const buttonClicked = event.target;
 
         if (buttonClicked.id === 'forward-button' || buttonClicked.id === 'backward-button') {
+            soundMoveRover();
 
             const action = buttonClicked.id === 'forward-button' ? 'F' : 'B';
 
@@ -133,6 +155,7 @@ document.addEventListener('DOMContentLoaded', function () {
                 });
 
         } else if (buttonClicked.id === 'left-button' || buttonClicked.id === 'right-button') {
+            soundTurnRover();
 
             const action = buttonClicked.id === 'left-button' ? 'L' : 'R';
 
@@ -156,6 +179,7 @@ document.addEventListener('DOMContentLoaded', function () {
 
         function isCrashed(newMarsMap) {
             if (newMarsMap.rover.hasCrashed) {
+                soundCrashRover();
                 alert(" ¡¡ Careful !! You have crashed, try to go a new route..");
             } else {
                 cleanRoverMap();
@@ -169,9 +193,11 @@ document.addEventListener('DOMContentLoaded', function () {
             const gridItems = gridContainer.querySelectorAll('.grid-item');
             const roverOldGridItem = gridItems[roverPositionX * size + roverPositionY];
 
-            const imageFondo = `/images/fondo.png`;
+            const imageFondo = `/src/main/resources/static/images/fondo.png`;
             const imageElementRover = roverOldGridItem.querySelector('.grid-image');
             imageElementRover.src = imageFondo;
+            imageElementRover.alt = 'Fondo';
+            imageElementRover.title = 'Paisaje marciano';
 
             roverOldGridItem.style.backgroundColor = '#c07244b0';
         }
@@ -189,9 +215,11 @@ document.addEventListener('DOMContentLoaded', function () {
             const gridItems = gridContainer.querySelectorAll('.grid-item');
             const roverGridItem = gridItems[roverPositionX * size + roverPositionY];
 
-            const roverImage = `/images/ROVER_${roverDirection}.png`;
+            const roverImage = `/src/main/resources/static/images/ROVER_${roverDirection}.png`;
             const imageElementRover = roverGridItem.querySelector('.grid-image');
             imageElementRover.src = roverImage;
+            imageElementRover.alt = `ROVER_${roverDirection}`;
+            imageElementRover.title = `Rover looking at ${roverDirection}`;
             roverGridItem.style.backgroundColor = 'rgba(56, 31, 12, 0.79)';
         }
 
@@ -199,6 +227,7 @@ document.addEventListener('DOMContentLoaded', function () {
             const rover = newMarsMap.rover;
 
             if (newMarsMap.isWon) {
+                soundWin();
 
                 // Oculto el contenedor de las grillas y botones de jugar
                 const mapContainer = document.getElementById('map-container');
@@ -208,8 +237,9 @@ document.addEventListener('DOMContentLoaded', function () {
                 mapInit.style.display = 'none';
 
                 const winnerImage = document.createElement('img');
-                winnerImage.src = '/images/WELL_DONE.png';
+                winnerImage.src = '/src/main/resources/static/images/WELL_DONE.png';
                 winnerImage.alt = "Win";
+                winnerImage.title = 'Well done!';
                 winnerImage.className = 'winner-image';
 
                 const winOverlay = document.getElementById('win-overlay');
@@ -228,34 +258,72 @@ document.addEventListener('DOMContentLoaded', function () {
                     const playAgain = document.getElementById('play-again');
                     playAgain.style.display = 'flex';
 
-                    setTimeout(function () {
+                    /*setTimeout(function () {
                         playAgain.style.display = 'none';
                         window.location.href = 'index.html';
-                    }, 5000);
+                    }, 2500);*/
 
-                    /*fetch(`http://localhost:8080/api/mars-map`, {
-                       method: 'DELETE',
-                       headers: {
-                           'Content-Type': 'application/json'
-                       }
-                   })
-                       .then(response => response.json())
-                       .then(data => {
+                    fetch(`http://localhost:8080/api/marsmap`, {
+                        method: 'DELETE',
+                        headers: {
+                            'Content-Type': 'application/json'
+                        }
+                    })
+                        .then(response => {
+                            if (response.ok) {
+                                if (response.status === 204) {
+                                    // respuesta vacía?
+                                    console.log("aca estamos en respuesta vacia");
+                                    return null;
+                                } else {
+                                    return response.json(); // Parsea el cuerpo de la respuesta JSON
+                                }
+                            } else {
+                                throw new Error('Error en la solicitud al servidor (no dio 200)');
+                            }
+                        })
+                        .then(data => {
 
-                           if (data.success) {
-                               setTimeout(function () {
-                                   window.location.href = 'index.html';
-                               }, 10000);
-                               
-                           } else {
-                               console.error('Error al reiniciar el juego:', data.error);
-                           }
-                       })
-                       .catch(error => {
-                           console.error('Error al reiniciar el juego:', error);
-                       });*/
+                            setTimeout(function () {
+                                playAgain.style.display = 'none';
+                                window.location.href = 'index.html';
+                            }, 4000);
+
+                        })
+                        .catch(error => {
+                            console.error('Error al reiniciar el juego (response): ', error);
+                        });
                 });
             }
+        }
+
+        function soundMoveRover() {
+            var soundMove = new Audio('/src/main/resources/static/sounds/mover.mp3');
+            soundMove.play();
+        }
+
+        function soundTurnRover() {
+            var soundTurn = new Audio('/src/main/resources/static/sounds/girar.mp3');
+            soundTurn.play();
+        }
+
+        function soundCrashRover() {
+            var soundCrash = new Audio('/src/main/resources/static/sounds/wololo.mp3');
+            soundCrash.play();
+        }
+
+        function soundCrashedRelicRover() {
+            var soundRelicCrash = new Audio('/src/main/resources/static/sounds/reliquia.mp3');
+            soundCrashedRelicRover.play();
+        }
+
+        function soundWin() {
+            var backgroundMusic = document.getElementById('background-music');
+            backgroundMusic.pause();
+            backgroundMusic.src = '/src/main/resources/static/sounds/ganar.mp3';
+
+            backgroundMusic.play();
+            backgroundMusic.volume = '0.8';
         }
 
 

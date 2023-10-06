@@ -61,7 +61,7 @@ public class MarsMapController {
     }
 
 
-    @DeleteMapping("/marsmap")
+    @DeleteMapping(path = "/marsmap", consumes = "application/json")
     public ResponseEntity<MarsMap> deleteMarsMap() {
         try {
             marsMapService.deleteMarsMap();

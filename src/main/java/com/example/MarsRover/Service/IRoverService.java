@@ -8,7 +8,7 @@ public interface IRoverService {
 
     void deleteRover();
 
-    Rover readRover(Rover rover);
+    Rover readRover();
 
     void updateRover(Rover rover);
 

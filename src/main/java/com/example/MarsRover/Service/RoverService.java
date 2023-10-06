@@ -46,7 +46,7 @@ public class RoverService implements IRoverService {
     public void deleteRover() {
         heightXMap = 0;
         wideYMap = 0;
-        roverRepository.delete(roverInstance);
+        //roverRepository.delete(roverInstance);
     }
 
     @Override
@@ -204,10 +204,9 @@ public class RoverService implements IRoverService {
     }
 
     @Override
-    public Rover readRover(Rover rover) {
-        //  GET
+    public Rover readRover() {
 
-        return null;
+        return roverRepository.findAll().get(0);
     }
 
     @Override

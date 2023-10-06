@@ -28,7 +28,6 @@ public class MartianObjectService implements IMartianObjectService {
     @Override
     public List<MartianObject> createMartianObjects(String levelDifficult) {
         martianObjects = new ArrayList<>();
-        MartianObject martianObject;
 
         int amountObjectCreate = howManyObjectCreate(levelDifficult);
         int numberOfObjectsCreated = 0;
@@ -38,17 +37,25 @@ public class MartianObjectService implements IMartianObjectService {
             positionX = randomNumber(1, marsMapInstance.getHeightX());
             positionY = randomNumber(1,  marsMapInstance.getWideY());
 
-            if (!iLockerService.isObjectHere(positionX, positionY)) {
+            numberOfObjectsCreated = addingMartianObject(positionX, positionY, numberOfObjectsCreated);
 
-                martianObject = new MartianObject(randomObjectMartian(), positionX, positionY);
-                martianObjects.add(martianObject);
-                iLockerService.putOccupiedPosition(positionX, positionY);
-
-                numberOfObjectsCreated += 1;
-            }
         } while (numberOfObjectsCreated < amountObjectCreate);
 
         return martianObjectRepository.saveAll(martianObjects);
+    }
+
+    private int addingMartianObject(int positionX, int positionY, int numberOfObjectsCreated) {
+        MartianObject martianObject;
+
+        if (!iLockerService.isObjectHere(positionX, positionY)) {
+
+            martianObject = new MartianObject(randomObjectMartian(), positionX, positionY);
+            martianObjects.add(martianObject);
+            iLockerService.putOccupiedPosition(positionX, positionY);
+
+            numberOfObjectsCreated += 1;
+        }
+        return numberOfObjectsCreated;
     }
 
     @Override

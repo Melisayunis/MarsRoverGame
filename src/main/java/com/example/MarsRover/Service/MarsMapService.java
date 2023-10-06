@@ -7,7 +7,6 @@ import com.example.MarsRover.Repository.MarsMapRepository;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
-import java.util.ArrayList;
 import java.util.List;
 
 @Service
@@ -54,9 +53,10 @@ public class MarsMapService implements IMarsMapService {
 
     @Override
     public void deleteMarsMap() {
+
         iLockerService.deleteAllLockers();
 
-        marsMapRepository.delete(marsMapInstance);
+        //marsMapRepository.delete(marsMapInstance);
         martianObjectService.deleteAllMartianObjet();
 
         roverService.deleteRover();
@@ -68,13 +68,11 @@ public class MarsMapService implements IMarsMapService {
         return marsMapRepository.findAll();
     }
 
-
     @Override
     public MarsMap updateMarsMapMoveRover(String command){
         roverService.moveRover(command);
         // cuando lo muevo me tengo q fijar si la nueva posicion es igual a la finishLine
         // y si lo es, ha ganado!
-
         if (hasRoverArrivedTheEnd()) {
             marsMapInstance.setIsWon(true);
         }
@@ -99,7 +97,6 @@ public class MarsMapService implements IMarsMapService {
 
         return marsMapInstance;
     }
-
 
     private Integer[] createFinialLine(){
         Integer[] finishLine = new Integer[2];

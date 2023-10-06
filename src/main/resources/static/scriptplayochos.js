@@ -44,7 +44,7 @@ document.addEventListener('DOMContentLoaded', function () {
     setTimeout(function () {
         loadder.style.display = 'none';
         mapContainer.style.display = 'flex';
-    }, 3000);
+    }, 4000);
 
 
     function generateMap(marsMap) {
@@ -258,32 +258,41 @@ document.addEventListener('DOMContentLoaded', function () {
                     const playAgain = document.getElementById('play-again');
                     playAgain.style.display = 'flex';
 
-                    setTimeout(function () {
+                    /*setTimeout(function () {
                         playAgain.style.display = 'none';
                         window.location.href = 'index.html';
-                    }, 5000);
+                    }, 2500);*/
 
-                    /*fetch(`http://localhost:8080/api/mars-map`, {
-                       method: 'DELETE',
-                       headers: {
-                           'Content-Type': 'application/json'
-                       }
-                   })
-                       .then(response => response.json())
-                       .then(data => {
+                    fetch(`http://localhost:8080/api/marsmap`, {
+                        method: 'DELETE',
+                        headers: {
+                            'Content-Type': 'application/json'
+                        }
+                    })
+                        .then(response => {
+                            if (response.ok) {
+                                if (response.status === 204) {
+                                    // respuesta vacía?
+                                    console.log("aca estamos en respuesta vacia");
+                                    return null;
+                                } else {
+                                    return response.json(); // Parsea el cuerpo de la respuesta JSON
+                                }
+                            } else {
+                                throw new Error('Error en la solicitud al servidor (no dio 200)');
+                            }
+                        })
+                        .then(data => {
 
-                           if (data.success) {
-                               setTimeout(function () {
-                                   window.location.href = 'index.html';
-                               }, 10000);
-                               
-                           } else {
-                               console.error('Error al reiniciar el juego:', data.error);
-                           }
-                       })
-                       .catch(error => {
-                           console.error('Error al reiniciar el juego:', error);
-                       });*/
+                            setTimeout(function () {
+                                playAgain.style.display = 'none';
+                                window.location.href = 'index.html';
+                            }, 4000);
+
+                        })
+                        .catch(error => {
+                            console.error('Error al reiniciar el juego (response): ', error);
+                        });
                 });
             }
         }

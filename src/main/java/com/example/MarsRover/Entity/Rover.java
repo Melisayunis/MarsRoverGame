@@ -31,6 +31,7 @@ public class Rover {
         this.positionX = positionX;
         this.positionY = positionY;
         this.direction = direction;
+        this.hasCrashed = false;
     }
 
     public Rover() {

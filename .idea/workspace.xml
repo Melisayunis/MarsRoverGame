@@ -5,93 +5,18 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="650ee9fe-76b9-4de0-b1d9-8fa73542ceb6" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/src/test/java/com/example/MarsRover/unit/EntityTest/LockerTest.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/test/java/com/example/MarsRover/unit/EntityTest/MarsMapTest.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/test/java/com/example/MarsRover/unit/EntityTest/MartianObjectTest.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/test/java/com/example/MarsRover/unit/EntityTest/RoverTest.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/test/java/com/example/MarsRover/unit/ServiceTest/CreatedRoverTest.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/test/java/com/example/MarsRover/unit/ServiceTest/EnumsTest/DirectionTest.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/test/java/com/example/MarsRover/unit/ServiceTest/EnumsTest/LevelDifficultTest.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/test/java/com/example/MarsRover/unit/ServiceTest/EnumsTest/MartianObjectNamesTest.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/test/java/com/example/MarsRover/unit/ServiceTest/LockerServiceTest.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/test/java/com/example/MarsRover/unit/ServiceTest/MartianObjectTest.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/test/java/com/example/MarsRover/unit/ServiceTest/RoverInvalidMovesTest.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/test/java/com/example/MarsRover/unit/ServiceTest/RoverMovesLookingEastTest.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/test/java/com/example/MarsRover/unit/ServiceTest/RoverMovesLookingNorthTest.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/test/java/com/example/MarsRover/unit/ServiceTest/RoverMovesLookingSouthTest.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/test/java/com/example/MarsRover/unit/ServiceTest/RoverMovesLookingWestTest.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/test/java/com/example/MarsRover/unit/ServiceTest/RoverTurnTest.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/com/example/MarsRover/Controller/MarsMapController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/MarsRover/Controller/MarsMapController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/MarsRover/Entity/Rover.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/MarsRover/Entity/Rover.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/MarsRover/Service/Enums/LevelDifficult.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/MarsRover/Service/Enums/LevelDifficult.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/MarsRover/Service/IRoverService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/MarsRover/Service/IRoverService.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/MarsRover/Service/LockerService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/MarsRover/Service/LockerService.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/com/example/MarsRover/Service/MarsMapService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/MarsRover/Service/MarsMapService.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/MarsRover/Service/MartianObjectService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/MarsRover/Service/MartianObjectService.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/com/example/MarsRover/Service/RoverService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/MarsRover/Service/RoverService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/application.properties" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/application.properties" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/resources/static/scriptplayochos.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/static/scriptplayochos.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/.netbeans_automatic_build" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/application.properties" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/application.properties" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/application.properties" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/target/classes/com/example/MarsRover/Controller/MarsMapController.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/example/MarsRover/Controller/MarsMapController.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/example/MarsRover/Entity/Rover.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/example/MarsRover/Entity/Rover.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/example/MarsRover/Service/Enums/LevelDifficult.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/example/MarsRover/Service/Enums/LevelDifficult.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/example/MarsRover/Service/IRoverService.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/example/MarsRover/Service/IRoverService.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/example/MarsRover/Service/LockerService.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/example/MarsRover/Service/LockerService.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/target/classes/com/example/MarsRover/Service/MarsMapService.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/example/MarsRover/Service/MarsMapService.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/target/classes/com/example/MarsRover/Service/RoverService.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/example/MarsRover/Service/RoverService.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/static/glitch.css.map" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/static/glitch.scss" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/static/images/ALIEN_FUNGUS.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/static/images/COMET_FRAGMENT.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/static/images/COSMIC_RELIC.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/static/images/FINISH_LINE.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/static/images/MARTIAN_CRYSTAL.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/static/images/MARTIAN_ROVER_MODULE.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/static/images/MOON_DUST.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/static/images/OTROS/Reliquia_AoE2.webp" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/static/images/OTROS/Sin título.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/static/images/OTROS/images.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/static/images/OTROS/pngegg(1).png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/static/images/OTROS/pngegg(11).png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/static/images/OTROS/pngegg(12).png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/static/images/OTROS/pngegg(13).png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/static/images/OTROS/pngegg(14).png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/static/images/OTROS/pngegg(15).png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/static/images/OTROS/pngegg(18).png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/static/images/OTROS/pngegg(20).png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/static/images/OTROS/pngegg(21).png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/static/images/OTROS/pngegg(22).png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/static/images/OTROS/pngegg(23).png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/static/images/OTROS/pngegg(25).png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/static/images/OTROS/pngegg(6).png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/static/images/OTROS/pngegg(9).png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/static/images/OTROS/rover.ico" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/static/images/RED_ROCK.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/static/images/ROVER.ico" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/static/images/ROVER.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/static/images/ROVER_E.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/static/images/ROVER_N.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/static/images/ROVER_S.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/static/images/ROVER_W.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/static/images/SOLAR_STONE.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/static/images/SPACE_PLANT.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/static/images/STARSHIP_DEBRIS.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/static/images/WELL_DONE.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/static/images/WINNER.gif" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/static/images/fondo.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/static/images/stylesplay8x8.css" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/static/index.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/static/playochos.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/static/roverMars.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/static/roverMars.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/static/rovers.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/static/script.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/static/scriptplayochos.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/static/styles.css" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/static/stylesplayochos.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/static/scriptplayochos.js" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/static/scriptplayochos.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/target/maven-status/maven-compiler-plugin/testCompile/default-testCompile/inputFiles.lst" beforeDir="false" afterPath="$PROJECT_DIR$/target/maven-status/maven-compiler-plugin/testCompile/default-testCompile/inputFiles.lst" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/test-classes/.netbeans_automatic_build" beforeDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />

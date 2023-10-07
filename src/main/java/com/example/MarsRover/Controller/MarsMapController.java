@@ -67,6 +67,7 @@ public class MarsMapController {
             marsMapService.deleteMarsMap();
             return ResponseEntity.ok().build();
         } catch (NoSuchElementException e) {
+            System.out.println(ResponseEntity.notFound().build());
             return ResponseEntity.notFound().build();
         }
     }

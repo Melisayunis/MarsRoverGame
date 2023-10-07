@@ -258,11 +258,6 @@ document.addEventListener('DOMContentLoaded', function () {
                     const playAgain = document.getElementById('play-again');
                     playAgain.style.display = 'flex';
 
-                    /*setTimeout(function () {
-                        playAgain.style.display = 'none';
-                        window.location.href = 'index.html';
-                    }, 2500);*/
-
                     fetch(`http://localhost:8080/api/marsmap`, {
                         method: 'DELETE',
                         headers: {
@@ -272,22 +267,19 @@ document.addEventListener('DOMContentLoaded', function () {
                         .then(response => {
                             if (response.ok) {
                                 if (response.status === 204) {
-                                    // respuesta vacía?
-                                    console.log("aca estamos en respuesta vacia");
                                     return null;
                                 } else {
-                                    return response.json(); // Parsea el cuerpo de la respuesta JSON
+                                    return null;
                                 }
                             } else {
                                 throw new Error('Error en la solicitud al servidor (no dio 200)');
                             }
                         })
                         .then(data => {
-
                             setTimeout(function () {
                                 playAgain.style.display = 'none';
                                 window.location.href = 'index.html';
-                            }, 4000);
+                            }, 3700);
 
                         })
                         .catch(error => {
@@ -328,11 +320,5 @@ document.addEventListener('DOMContentLoaded', function () {
 
 
     });
-
-
-
-
-
-
 
 });

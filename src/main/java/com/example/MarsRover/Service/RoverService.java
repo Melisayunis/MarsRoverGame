@@ -40,13 +40,16 @@ public class RoverService implements IRoverService {
         iLockerService.putOccupiedPosition(positionX, positionY);
 
         roverRepository.save(roverInstance);
+        roverInstance.setId(roverRepository.findAll().get(0).getId());
+
     }
+
 
     @Override
     public void deleteRover() {
         heightXMap = 0;
         wideYMap = 0;
-        //roverRepository.delete(roverInstance);
+        roverRepository.delete(roverInstance);
     }
 
     @Override

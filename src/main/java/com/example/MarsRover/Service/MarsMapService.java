@@ -41,6 +41,7 @@ public class MarsMapService implements IMarsMapService {
         iLockerService.createLockers(heightX, wideY);
 
         roverService.createRover(heightX, wideY);
+
         marsMapInstance.setRover(roverInstance);
 
         List<MartianObject> martianObjects = martianObjectService.createMartianObjects(levelDifficult);
@@ -48,7 +49,10 @@ public class MarsMapService implements IMarsMapService {
 
         marsMapInstance.setFinishLine(createFinialLine());
 
-        return marsMapRepository.save(marsMapInstance);
+        marsMapRepository.save(marsMapInstance);
+        marsMapInstance.setId(marsMapRepository.findAll().get(0).getId());
+
+        return marsMapInstance;
     }
 
     @Override
@@ -56,7 +60,7 @@ public class MarsMapService implements IMarsMapService {
 
         iLockerService.deleteAllLockers();
 
-        //marsMapRepository.delete(marsMapInstance);
+        marsMapRepository.delete(marsMapInstance);
         martianObjectService.deleteAllMartianObjet();
 
         roverService.deleteRover();

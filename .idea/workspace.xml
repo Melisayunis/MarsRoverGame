@@ -7,16 +7,15 @@
     <list default="true" id="650ee9fe-76b9-4de0-b1d9-8fa73542ceb6" name="Changes" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/com/example/MarsRover/Controller/MarsMapController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/MarsRover/Controller/MarsMapController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/MarsRover/Service/Enums/Direction.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/MarsRover/Service/Enums/Direction.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/MarsRover/Service/Enums/LevelDifficult.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/MarsRover/Service/Enums/LevelDifficult.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/MarsRover/Service/ILockerService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/MarsRover/Service/ILockerService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/MarsRover/Service/LockerService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/MarsRover/Service/LockerService.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/com/example/MarsRover/Service/MarsMapService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/MarsRover/Service/MarsMapService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/MarsRover/Service/MartianObjectService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/MarsRover/Service/MartianObjectService.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/com/example/MarsRover/Service/RoverService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/MarsRover/Service/RoverService.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/application.properties" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/application.properties" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/resources/static/scriptplayochos.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/static/scriptplayochos.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/application.properties" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/application.properties" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/example/MarsRover/Controller/MarsMapController.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/example/MarsRover/Controller/MarsMapController.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/example/MarsRover/Service/MarsMapService.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/example/MarsRover/Service/MarsMapService.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/example/MarsRover/Service/RoverService.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/example/MarsRover/Service/RoverService.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/static/scriptplayochos.js" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/static/scriptplayochos.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/maven-status/maven-compiler-plugin/testCompile/default-testCompile/inputFiles.lst" beforeDir="false" afterPath="$PROJECT_DIR$/target/maven-status/maven-compiler-plugin/testCompile/default-testCompile/inputFiles.lst" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/static/stylesplayochos.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/static/stylesplayochos.css" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -68,7 +67,7 @@
       <recent name="C:\Users\Briangio\Desktop\Mars Rover\MarsRover\src\test\java\com\example\MarsRover" />
     </key>
   </component>
-  <component name="RunManager" selected="JUnit.MartianObjectTest">
+  <component name="RunManager" selected="JUnit.com.example.MarsRover.unit in MarsRover">
     <configuration name="LockerServiceTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="MarsRover" />
       <extension name="coverage">
@@ -145,9 +144,9 @@
     </configuration>
     <recent_temporary>
       <list>
+        <item itemvalue="JUnit.com.example.MarsRover.unit in MarsRover" />
         <item itemvalue="JUnit.MartianObjectTest" />
         <item itemvalue="JUnit.LockerServiceTest" />
-        <item itemvalue="JUnit.com.example.MarsRover.unit in MarsRover" />
         <item itemvalue="JUnit.RoverMovesLookingWestTest" />
         <item itemvalue="JUnit.RoverMovesLookingEastTest" />
       </list>

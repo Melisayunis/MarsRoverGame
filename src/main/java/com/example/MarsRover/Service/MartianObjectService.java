@@ -48,13 +48,13 @@ public class MartianObjectService implements IMartianObjectService {
         MartianObject martianObject;
 
         if (!iLockerService.isObjectHere(positionX, positionY)) {
-
             martianObject = new MartianObject(randomObjectMartian(), positionX, positionY);
             martianObjects.add(martianObject);
             iLockerService.putOccupiedPosition(positionX, positionY);
 
             numberOfObjectsCreated += 1;
         }
+
         return numberOfObjectsCreated;
     }
 
@@ -76,9 +76,8 @@ public class MartianObjectService implements IMartianObjectService {
 
         } else if (marsMapInstance.getHeightX() == 12) {
             return (objectsToLevelDifficult(levelDifficult) * 3);
-
         }
-        System.out.println(" No deberia entrar aca! ");
+
         return 0;
     }
 

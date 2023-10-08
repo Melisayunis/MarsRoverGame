@@ -6,9 +6,7 @@ import com.example.MarsRover.Service.Enums.Direction;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
-import java.util.List;
 import java.util.Random;
-import java.util.concurrent.ThreadLocalRandom;
 
 @Service
 public class RoverService implements IRoverService {
@@ -41,9 +39,7 @@ public class RoverService implements IRoverService {
 
         roverRepository.save(roverInstance);
         roverInstance.setId(roverRepository.findAll().get(0).getId());
-
     }
-
 
     @Override
     public void deleteRover() {
@@ -54,14 +50,12 @@ public class RoverService implements IRoverService {
 
     @Override
     public void moveRover(String moves) {
+        checkValidMove(moves);
+
         if (moves.equals("F")) {
             moveForward();
         } else if (moves.equals("B")) {
             moveBackward();
-        }
-
-        if (!isValidMove(moves)) {
-            throw new IllegalArgumentException("Valor de movimiento no válido: " + moves);
         }
     }
 
@@ -167,14 +161,12 @@ public class RoverService implements IRoverService {
 
     @Override
     public void turnRover(String turn) {
+        checkValidTurn(turn);
+
         if (turn.equals("L")) {
             turnLeft();
         } else if (turn.equals("R")) {
             turnRight();
-        }
-
-        if (!isValidTurn(turn)) {
-            throw new IllegalArgumentException("Valor de giro no válido: " + turn);
         }
     }
 
@@ -184,7 +176,7 @@ public class RoverService implements IRoverService {
             case ("S") -> roverInstance.setDirection("E");
             case ("E") -> roverInstance.setDirection("N");
             case ("W") -> roverInstance.setDirection("S");
-            default -> System.out.println(" No deberia entrar aca");
+            default -> System.out.println(" Direccion no valida");
         }
     }
 
@@ -194,21 +186,24 @@ public class RoverService implements IRoverService {
             case ("S") -> roverInstance.setDirection("W");
             case ("E") -> roverInstance.setDirection("S");
             case ("W") -> roverInstance.setDirection("N");
-            default -> System.out.println(" No deberia entrar aca");
+            default -> System.out.println(" Direccion no valida");
         }
     }
 
-    private boolean isValidTurn(String turn) {
-        return (turn.equals("L") || turn.equals("R")) ;
+    private void checkValidTurn(String turn) {
+        if (!(turn.equals("L") || turn.equals("R"))) {
+            throw new IllegalArgumentException("Valor de giro no válido: " + turn);
+        }
     }
 
-    private boolean isValidMove(String moves) {
-        return (moves.equals("F") || moves.equals("B")) ;
+    private void checkValidMove(String moves) {
+        if (!(moves.equals("F") || moves.equals("B"))) {
+            throw new IllegalArgumentException("Valor de movimiento no válido: " + moves);
+        }
     }
 
     @Override
     public Rover readRover() {
-
         return roverRepository.findAll().get(0);
     }
 
@@ -217,12 +212,12 @@ public class RoverService implements IRoverService {
         roverInstance.setDirection(rover.getDirection());
         roverInstance.setPositionX(rover.getPositionX());
         roverInstance.setPositionY(rover.getPositionY());
+        roverInstance.setHasCrashed(rover.getHasCrashed());
 
         roverRepository.save(roverInstance);
     }
 
     private int randomNumber(int lowerBound, int upperBound) {
-
         return (int) (Math.random() * (upperBound - lowerBound + 1) + lowerBound);
     }
 
@@ -233,6 +228,5 @@ public class RoverService implements IRoverService {
         int valueIndex = random.nextInt(valueDirections.length);
         return valueDirections[valueIndex].name();
     }
-
 
 }

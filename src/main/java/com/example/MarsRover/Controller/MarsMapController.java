@@ -60,7 +60,6 @@ public class MarsMapController {
         }
     }
 
-
     @DeleteMapping(path = "/marsmap", consumes = "application/json")
     public ResponseEntity<MarsMap> deleteMarsMap() {
         try {
@@ -71,4 +70,5 @@ public class MarsMapController {
             return ResponseEntity.notFound().build();
         }
     }
+
 }

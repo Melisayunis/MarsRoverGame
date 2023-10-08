@@ -18,10 +18,7 @@ public class LockerService implements ILockerService {
 
     @Override
     public void createLockers(int heightX, int wideY) {
-
-        if (heightX <= 0 || wideY <= 0) {
-            throw new IllegalArgumentException("Los valores heightX y wideY deben ser mayores que cero.");
-        }
+        validationPositionThrow(heightX, wideY);
 
         lockers = new ArrayList<>();
         Locker locker;
@@ -37,9 +34,7 @@ public class LockerService implements ILockerService {
     }
 
     public boolean isObjectHere(int positionX, int positionY) {
-        if (positionX <= 0 || positionY <= 0) {
-            throw new IllegalArgumentException("Los valores positionX y positionY deben ser mayores que cero.");
-        }
+        validationPositionThrow(positionX, positionY);
 
         for (Locker locker : lockers) {
             if (locker.getPositionX().equals(positionX) && locker.getPositionY().equals(positionY)) {
@@ -52,11 +47,7 @@ public class LockerService implements ILockerService {
     }
 
     public void putOccupiedPosition(int positionX, int positionY) {
-
-        if (positionX <= 0 || positionY <= 0) {
-            // ver como manipular valores mayores a los requeridos
-            throw new IllegalArgumentException("Los valores positionX y positionY deben ser mayores que cero.");
-        }
+        validationPositionThrow(positionX, positionY);
 
         for (Locker locker : lockers) {
             if (locker.getPositionX() == positionX) {
@@ -68,14 +59,18 @@ public class LockerService implements ILockerService {
     }
 
     public void setFreePosition(int positionX, int positionY) {
-        if (positionX <= 0 || positionY <= 0) {
-            throw new IllegalArgumentException("Los valores positionX y positionY deben ser mayores que cero.");
-        }
+        validationPositionThrow(positionX, positionY);
 
         for (Locker locker : lockers) {
             if (locker.getPositionX().equals(positionX) && locker.getPositionY().equals(positionY)) {
                 locker.setOccupied(false);
             }
+        }
+    }
+
+    private static void validationPositionThrow(int positionX, int positionY) {
+        if (positionX <= 0 || positionY <= 0) {
+            throw new IllegalArgumentException("Los valores deben ser mayores que cero.");
         }
     }
 

@@ -41,7 +41,6 @@ public class MarsMapService implements IMarsMapService {
         iLockerService.createLockers(heightX, wideY);
 
         roverService.createRover(heightX, wideY);
-
         marsMapInstance.setRover(roverInstance);
 
         List<MartianObject> martianObjects = martianObjectService.createMartianObjects(levelDifficult);
@@ -57,7 +56,6 @@ public class MarsMapService implements IMarsMapService {
 
     @Override
     public void deleteMarsMap() {
-
         iLockerService.deleteAllLockers();
 
         marsMapRepository.delete(marsMapInstance);
@@ -68,15 +66,13 @@ public class MarsMapService implements IMarsMapService {
 
     @Override
     public List<MarsMap> readMarsMaps() {
-
         return marsMapRepository.findAll();
     }
 
     @Override
     public MarsMap updateMarsMapMoveRover(String command){
         roverService.moveRover(command);
-        // cuando lo muevo me tengo q fijar si la nueva posicion es igual a la finishLine
-        // y si lo es, ha ganado!
+
         if (hasRoverArrivedTheEnd()) {
             marsMapInstance.setIsWon(true);
         }
@@ -88,11 +84,7 @@ public class MarsMapService implements IMarsMapService {
         boolean samePositionX = (roverInstance.getPositionX() == marsMapInstance.getFinishLine()[0]);
         boolean samePositionY = (roverInstance.getPositionY() == marsMapInstance.getFinishLine()[1]);
 
-        if (samePositionX && samePositionY) {
-            return true;
-        }
-
-        return false;
+        return (samePositionX && samePositionY);
     }
 
     @Override
@@ -111,17 +103,21 @@ public class MarsMapService implements IMarsMapService {
             positionX = randomNumber(1, marsMapInstance.getHeightX());
             positionY = randomNumber(1, marsMapInstance.getWideY());
 
-            if (!iLockerService.isObjectHere(positionX, positionY)) {
-                finishLine[0] = positionX;
-                finishLine[1] = positionY;
+            isCreated = isCreatedFinishLine(positionX, positionY, finishLine, isCreated);
 
-                //iLockerService.putOccupiedPosition(positionX, positionY);
-
-                isCreated = true;
-            }
         } while (!isCreated);
 
         return  finishLine;
+    }
+
+    private boolean isCreatedFinishLine(int positionX, int positionY, Integer[] finishLine, boolean isCreated) {
+        if (!iLockerService.isObjectHere(positionX, positionY)) {
+            finishLine[0] = positionX;
+            finishLine[1] = positionY;
+
+            isCreated = true;
+        }
+        return isCreated;
     }
 
     private int randomNumber(int lowerBound, int upperBound) {

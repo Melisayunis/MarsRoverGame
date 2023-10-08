@@ -279,7 +279,7 @@ document.addEventListener('DOMContentLoaded', function () {
                             setTimeout(function () {
                                 playAgain.style.display = 'none';
                                 window.location.href = 'index.html';
-                            }, 3700);
+                            }, 1300);
 
                         })
                         .catch(error => {
